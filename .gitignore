@@ -9,6 +9,7 @@
 # Keep lightweight project metadata
 !README.md
 !Chronos.uproject
+!Chronos_Project_Report_ArundhatiDas.pdf
 !Config/
 !Config/**
 

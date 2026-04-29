@@ -1,0 +1,54 @@
+# Blueprint-only snapshot mode: ignore everything by default,
+# then explicitly allow core project metadata and Blueprint assets.
+*
+
+# Keep repository control files
+!.gitignore
+!.gitattributes
+
+# Keep lightweight project metadata
+!README.md
+!Chronos.uproject
+!Config/
+!Config/**
+
+# Keep only core Blueprint assets
+!Content/
+!Content/BP_GameInstance.uasset
+!Content/Blueprints/
+!Content/Blueprints/**
+!Content/Dialogue/
+!Content/Dialogue/**
+!Content/ThirdPerson/
+!Content/ThirdPerson/**
+
+# Ignore large binary asset folders to keep repo small
+Content/Buildings/
+Content/Buildings/**
+Content/**/Materials/
+Content/**/Materials/**
+Content/**/Textures/
+Content/**/Textures/**
+Content/**/StaticMeshes/
+Content/**/StaticMeshes/**
+Content/**/Meshes/
+Content/**/Meshes/**
+Content/**/Images/
+Content/**/Images/**
+
+# Ignore generated and media folders
+Content/Generated_Images/
+Content/Generated_Materials/
+Content/Fab/
+Content/Movies/
+Content/Audio/
+
+# Re-include specific small, high-value files/folders
+!Content/BP_GameInstance.uasset
+!Content/SaveGame/
+!Content/SaveGame/**
+# Ignore Unreal generated/merge artifacts which are large
+Content/**/_GENERATED/
+Content/**/_GENERATED/**
+Content/ThirdPerson/_GENERATED/
+Content/ThirdPerson/_GENERATED/**

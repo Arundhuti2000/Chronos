@@ -32,21 +32,27 @@ The project centers on a fractured timeline where the player travels through por
 - Unreal Engine 5.6
 - A valid setup for any AI-driven dialogue features that depend on Gemini API access
 
-## Git LFS
+## Repository Contents
 
-This project includes a root [.gitattributes](.gitattributes) file that tracks common Unreal Engine binary assets with Git LFS, including `.uasset`, `.umap`, image, audio, video, and 3D model files.
+⚠️ **This is a Blueprint-Only Snapshot**: This repository contains only the core Blueprint systems, dialogue assets, and project configuration to remain within the free tier Git LFS limit (1 GB storage). The following are **intentionally excluded**:
 
-If you are initializing the repository locally, run the following once:
+- Textures (`.tga`, `.png`, `.jpg`, etc.)
+- Materials (`.uasset` material instances and definitions under `Buildings/` and other asset folders)
+- Static meshes and 3D models
+- Generated assets and media files
+- Large binary build artifacts
 
-```bash
-git init
-git lfs install
-git add .gitattributes
-git add .
-git commit -m "Initial commit"
-```
+**What is included:**
 
-If the repository already exists on GitHub, make sure Git LFS is enabled for the repo and then push the commit as usual.
+- All core Blueprint systems: Quest, Inventory, Codex, Game Instance, Game Mode
+- NPC dialogue systems and character blueprints
+- Level references and interactive object BPs
+- Save/load system blueprints
+- UI and interaction widgets
+- Project configuration files (`Config/`)
+- Audio references and dialogue structures
+
+This repository serves as a **reference implementation** of the architecture and system design. To run the full game with all visual assets, you will need the complete project files from the original development environment.
 
 ## Getting Started
 
